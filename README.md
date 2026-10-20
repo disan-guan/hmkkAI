@@ -22,6 +22,7 @@ Sistem penghitung kendaraan otomatis berbasis YOLO, OpenCV, dan CCTV streaming H
 ```text
 hmkkAI/
 ├── main.py
+├── build.bat
 ├── config.ini
 ├── requirements.txt
 ├── README.md
@@ -38,6 +39,7 @@ hmkkAI/
 Keterangan:
 
 - `main.py`: menjalankan API dan Vehicle Counter.
+- `build.bat`: untuk mengcompile ke file exe.
 - `config.ini`: konfigurasi CCTV, AI, tampilan, dan sensor.
 - `setup/api.py`: REST API untuk FrontEnd.
 - `setup/config.py`: membaca konfigurasi.
@@ -104,6 +106,10 @@ python main.py
 Launcher akan menjalankan API pada port 8000 dan aplikasi Vehicle Counter.
 
 Tekan `Q` pada jendela video untuk keluar dari aplikasi penghitung kendaraan. Gunakan `CTRL+C` pada terminal launcher untuk menghentikan proses yang masih berjalan.
+
+## Mencompile Aplikasi
+
+Jalankan atau klik 2x build.bat
 
 ## REST API
 

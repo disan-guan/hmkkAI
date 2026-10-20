@@ -1,9 +1,16 @@
 
 import configparser
+import sys
 from pathlib import Path
 
 # config.ini berada satu folder di atas folder setup
-CONFIG_PATH = Path(__file__).resolve().parent.parent / "config.ini"
+# CONFIG_PATH = Path(__file__).resolve().parent.parent / "config.ini"
+if getattr(sys, "frozen", False):
+    BASE_DIR = Path(sys.executable).resolve().parent
+else:
+    BASE_DIR = Path(__file__).resolve().parent.parent
+
+CONFIG_PATH = BASE_DIR / "config.ini"
 
 config = configparser.ConfigParser()
 
@@ -15,7 +22,8 @@ if not CONFIG_PATH.exists():
 config.read(CONFIG_PATH, encoding="utf-8")
 
 STREAM_URL = config.get("CCTV", "STREAM_URL")
-MODEL_PATH = config.get("AI", "MODEL_PATH")
+# MODEL_PATH = config.get("AI", "MODEL_PATH")
+MODEL_PATH = str(BASE_DIR / config.get("AI", "MODEL_PATH"))
 
 IMAGE_SIZE = config.getint("AI", "IMAGE_SIZE")
 CONFIDENCE = config.getfloat("AI", "CONFIDENCE")

@@ -5,7 +5,13 @@ import time
 from pathlib import Path
 
 # Folder utama project
-BASE_DIR = Path(__file__).resolve().parent
+# BASE_DIR = Path(__file__).resolve().parent
+# SETUP_DIR = BASE_DIR / "setup"
+if getattr(sys, "frozen", False):
+    BASE_DIR = Path(sys.executable).resolve().parent
+else:
+    BASE_DIR = Path(__file__).resolve().parent
+
 SETUP_DIR = BASE_DIR / "setup"
 PYTHON = sys.executable
 

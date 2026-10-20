@@ -1,10 +1,18 @@
 
 import sqlite3
+import sys
 from pathlib import Path
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
-DB_PATH = Path(__file__).resolve().with_name("vehicle_counter.db")
+# DB_PATH = Path(__file__).resolve().with_name("vehicle_counter.db")
+if getattr(sys, "frozen", False):
+    BASE_DIR = Path(sys.executable).resolve().parent
+else:
+    BASE_DIR = Path(__file__).resolve().parent.parent
+
+DB_PATH = BASE_DIR / "vehicle_counter.db"
+
 TIMEZONE = ZoneInfo("Asia/Jakarta")
 
 
