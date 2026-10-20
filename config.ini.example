@@ -1,4 +1,4 @@
-//rename config.ini.example -> config.ini
+#rename config.ini.example -> config.ini
 [CCTV]
 STREAM_URL = your_stream_link
 
