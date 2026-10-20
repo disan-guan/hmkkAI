@@ -19,6 +19,7 @@ env/
 # =========================
 # Environment & Secrets
 # =========================
+config.ini
 .env
 .env.*
 !.env.example

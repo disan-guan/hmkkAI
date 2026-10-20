@@ -1,0 +1,26 @@
+//rename config.ini.example -> config.ini
+[CCTV]
+STREAM_URL = your_stream_link
+
+[AI]
+MODEL_PATH = yolo26n.pt
+IMAGE_SIZE = 960
+CONFIDENCE = 0.25
+TARGET_FPS = 25
+
+[DISPLAY]
+WIDTH = 1280
+HEIGHT = 720
+PANEL_ALPHA = 0.55
+
+[SENSOR]
+CENTER_X = 0.4
+CENTER_Y = 0.55
+LENGTH = 0.75
+ANGLE = 0
+
+[VEHICLES]
+MOBIL = 2
+MOTOR = 3
+BUS = 5
+TRUK = 7
