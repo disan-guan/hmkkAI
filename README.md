@@ -32,7 +32,7 @@ hmkkAI/
     ├── api.py
     ├── config.py
     ├── database.py
-    └── vehicle_counter.py
+    └── ai.py
 ```
 
 Keterangan:
@@ -42,7 +42,7 @@ Keterangan:
 - `setup/api.py`: REST API untuk FrontEnd.
 - `setup/config.py`: membaca konfigurasi.
 - `setup/database.py`: koneksi dan penyimpanan SQLite.
-- `setup/vehicle_counter.py`: deteksi dan penghitungan kendaraan.
+- `setup/ai.py`: deteksi dan penghitungan kendaraan.
 - `vehicle_counter.db`: database yang dibuat otomatis.
 - `yolo26n.pt`: file model YOLO yang digunakan.
 
